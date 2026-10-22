@@ -1,0 +1,15 @@
+*.iml
+.gradle
+/build
+/app/build
+.DS_Store
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+*.jks
+*.keystore
+
+# APK는 공모전 제출 필수 산출물이므로 추적 포함
+!apk/
+!apk/*.apk

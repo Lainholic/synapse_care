@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 차량용 인포테인먼트(AAOS) 지원 선언 -->
+    <uses-feature
+        android:name="android.hardware.type.automotive"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.car.templates_host"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:label="시냅스케어"
+        android:roundIcon="@android:drawable/sym_def_app_icon"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Material.NoActionBar">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|screenLayout|density"
+            android:screenOrientation="unspecified">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!-- 차량용 앱 런처 카테고리 -->
+                <category android:name="android.intent.category.CAR_LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
